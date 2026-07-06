@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Phuc Tran | Portfolio",
+  title: "Phuc Tran | Portfolio | tranhoangphucttb",
   description:
     "A polished portfolio landing page for a product designer and frontend engineer.",
 };

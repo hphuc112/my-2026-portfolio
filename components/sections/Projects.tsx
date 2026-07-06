@@ -5,24 +5,24 @@ export function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
       <div className="mb-8 max-w-2xl">
-        <p className="text-sm font-semibold tracking-[0.3em] text-sky-600 uppercase">
+        <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
           Selected projects
         </p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-slate-900">
+        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-800">
           A few launches I&apos;ve helped shape.
         </h2>
       </div>
       <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project) => (
           <Card key={project.title} className="space-y-4">
-            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-6 text-sm text-slate-600">
+            <div className="border-taupe bg-sand/70 rounded-2xl border p-6 text-sm text-stone-600">
               {project.description}
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold text-slate-900">
+              <h3 className="text-xl font-semibold text-stone-800">
                 {project.title}
               </h3>
-              <p className="text-sm text-slate-500">{project.stack}</p>
+              <p className="text-sm text-stone-500">{project.stack}</p>
             </div>
           </Card>
         ))}

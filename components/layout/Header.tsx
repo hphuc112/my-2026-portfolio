@@ -8,11 +8,11 @@ const navItems = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-10 border-b border-slate-200/80 bg-white/80 backdrop-blur">
+    <header className="border-taupe/80 bg-cream/90 sticky top-0 z-10 border-b backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
         <Link
           href="#top"
-          className="text-lg font-semibold tracking-tight text-slate-900"
+          className="text-lg font-semibold tracking-tight text-stone-800"
         >
           Phuc Tran
         </Link>
@@ -21,7 +21,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="transition hover:text-slate-900"
+              className="transition hover:text-stone-900"
             >
               {item.label}
             </Link>
