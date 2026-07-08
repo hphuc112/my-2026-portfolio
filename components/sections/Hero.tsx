@@ -6,7 +6,7 @@ export function Hero() {
       <div className="bg-cream flex min-h-screen flex-col justify-between p-8 pt-24 lg:p-12 lg:pt-28">
         <div>
           <span className="border-taupe bg-sand/80 inline-flex items-center rounded-full border px-4 py-2 text-sm text-stone-700">
-            Available for new opportunities
+            Available for new projects.
           </span>
         </div>
 

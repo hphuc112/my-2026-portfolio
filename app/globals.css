@@ -3,6 +3,33 @@
 :root {
   --background: #f9f8f6;
   --foreground: #2f241d;
+
+  --primary: #2f241d;
+  --secondary: #c9b59c;
+  --muted: #d9cfc7;
+  --accent: #efe9e3;
+  --border: #d9cfc7;
+
+  --success: #4d7c4a;
+  --warning: #b8862c;
+  --danger: #b3452f;
+  --info: #3d6d94;
+}
+
+.dark {
+  --background: #2f241d;
+  --foreground: #f9f8f6;
+
+  --primary: #f9f8f6;
+  --secondary: #c9b59c;
+  --muted: #4a3b30;
+  --accent: #3a2f26;
+  --border: #4a3b30;
+
+  --success: #7fb87a;
+  --warning: #d9a13f;
+  --danger: #d97260;
+  --info: #6ea3c9;
 }
 
 @theme {
@@ -15,6 +42,18 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-info: var(--info);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -35,6 +74,6 @@ body {
 }
 
 ::selection {
-  background-color: #c9b59c;
-  color: #2f241d;
+  background-color: var(--color-camel);
+  color: var(--foreground);
 }
