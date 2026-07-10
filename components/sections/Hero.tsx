@@ -56,7 +56,7 @@ export function Hero() {
 
       <div className="bg-sand relative min-h-[320px] overflow-hidden lg:h-full">
         <img
-          src="/images/portrait.jpg"
+          src="/images/portrait.webp"
           alt="Portrait of Phuc Tran"
           className="h-full min-h-[320px] w-full object-cover object-center"
         />
