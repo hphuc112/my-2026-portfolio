@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const navItems = [
   { label: "About", href: "#overview" },
@@ -60,7 +61,7 @@ export function Header() {
             className="border-border bg-secondary hover:bg-accent flex h-10 w-10 items-center justify-center rounded-full border p-2 transition"
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
-            <img
+            <Image
               src="/images/night-mode.png"
               alt={
                 theme === "dark"

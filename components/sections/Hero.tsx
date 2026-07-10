@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import Image from "next/image";
 
 export function Hero() {
   return (
@@ -54,11 +55,12 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="bg-accent relative min-h-[320px] overflow-hidden lg:h-full">
-        <img
+      <div className="bg-accent relative min-h-80 overflow-hidden lg:h-full">
+        <Image
           src="/images/portrait.webp"
           alt="Portrait of Phuc Tran"
           className="h-full w-full object-cover object-center lg:absolute lg:inset-0"
+          fill
         />
       </div>
     </section>
