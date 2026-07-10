@@ -8,17 +8,17 @@ export function Testimonials() {
         <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
           Testimonials
         </p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-800">
+        <h2 className="text-foreground mt-3 text-3xl font-semibold tracking-tight">
           Trusted by founders and teams building in public.
         </h2>
       </div>
       <div className="grid gap-6 md:grid-cols-3">
         {testimonials.map((item) => (
           <Card key={item.author} className="space-y-4">
-            <p className="text-stone-600">“{item.quote}”</p>
+            <p className="text-foreground/70">“{item.quote}”</p>
             <div>
-              <p className="font-semibold text-stone-800">{item.author}</p>
-              <p className="text-sm text-stone-500">{item.role}</p>
+              <p className="text-foreground font-semibold">{item.author}</p>
+              <p className="text-foreground/60 text-sm">{item.role}</p>
             </div>
           </Card>
         ))}

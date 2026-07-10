@@ -12,6 +12,20 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const themeScript = `
+  (function () {
+    try {
+      const storedTheme = window.localStorage.getItem("theme");
+      const isDark = storedTheme ? storedTheme === "dark" : true;
+      document.documentElement.classList.toggle("dark", isDark);
+      document.documentElement.style.colorScheme = isDark ? "dark" : "light";
+    } catch (e) {
+      document.documentElement.classList.add("dark");
+      document.documentElement.style.colorScheme = "dark";
+    }
+  })();
+`;
+
 export const metadata: Metadata = {
   title: "Phuc Tran | Portfolio | tranhoangphucttb",
   description:
@@ -26,8 +40,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );

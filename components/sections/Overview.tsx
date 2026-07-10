@@ -4,16 +4,16 @@ export function Overview() {
       id="overview"
       className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-8"
     >
-      <div className="border-taupe grid gap-8 rounded-[2rem] border bg-white/80 p-8 shadow-sm lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
+      <div className="border-border bg-background/80 grid gap-8 rounded-[2rem] border p-8 shadow-sm lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
         <div className="flex flex-col gap-3">
           <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
             Overview
           </p>
-          <h2 className="text-3xl font-semibold tracking-tight text-stone-800 sm:text-4xl">
+          <h2 className="text-foreground text-3xl font-semibold tracking-tight sm:text-4xl">
             A Front-End Developer in Ho Chi Minh City.
           </h2>
         </div>
-        <div className="flex flex-col gap-4 text-base leading-7 text-stone-600">
+        <div className="text-foreground/70 flex flex-col gap-4 text-base leading-7">
           <p>
             Computer Science Engineering graduate with hands-on experience
             building web applications. Familiar with HTML, CSS, JavaScript, and

@@ -8,21 +8,21 @@ export function Projects() {
         <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
           Selected projects
         </p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-800">
+        <h2 className="text-foreground mt-3 text-3xl font-semibold tracking-tight">
           A few launches I&apos;ve helped shape.
         </h2>
       </div>
       <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project) => (
           <Card key={project.title} className="space-y-4">
-            <div className="border-taupe bg-sand/70 rounded-2xl border p-6 text-sm text-stone-600">
+            <div className="border-border bg-accent/70 text-foreground/70 rounded-2xl border p-6 text-sm">
               {project.description}
             </div>
             <div className="space-y-2">
-              <h3 className="text-xl font-semibold text-stone-800">
+              <h3 className="text-foreground text-xl font-semibold">
                 {project.title}
               </h3>
-              <p className="text-sm text-stone-500">{project.stack}</p>
+              <p className="text-foreground/60 text-sm">{project.stack}</p>
             </div>
           </Card>
         ))}

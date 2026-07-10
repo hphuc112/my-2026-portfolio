@@ -11,8 +11,9 @@ export function Button({ href, children, variant = "primary" }: ButtonProps) {
   const baseClasses =
     "inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition";
   const variants = {
-    primary: "bg-stone-800 text-cream hover:bg-stone-700",
-    secondary: "border border-taupe bg-white/80 text-stone-700 hover:bg-sand",
+    primary: "bg-foreground text-background hover:bg-foreground/90",
+    secondary:
+      "border border-border bg-background/80 text-foreground hover:bg-accent",
   };
 
   return (

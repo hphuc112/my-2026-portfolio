@@ -8,7 +8,7 @@ export function Skills() {
         <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
           Skills
         </p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-800">
+        <h2 className="text-foreground mt-3 text-3xl font-semibold tracking-tight">
           The stack I reach for most.
         </h2>
       </div>

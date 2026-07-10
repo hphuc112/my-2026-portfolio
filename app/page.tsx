@@ -10,7 +10,7 @@ import { Testimonials } from "@/components/sections/Testimonials";
 
 export default function Home() {
   return (
-    <main className="bg-cream min-h-screen text-stone-800">
+    <main className="bg-background text-foreground min-h-screen">
       <Header />
       <Hero />
       <Overview />
