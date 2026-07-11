@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 const navItems = [
   { label: "About", href: "#overview" },
@@ -58,10 +57,10 @@ export function Header() {
           <button
             type="button"
             onClick={toggleTheme}
-            className="border-border bg-secondary hover:bg-accent flex h-10 w-10 items-center justify-center rounded-full border p-2 transition"
+            className="border-border bg-secondary hover:bg-accent flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border p-2 transition"
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
-            <Image
+            <img
               src="/images/night-mode.png"
               alt={
                 theme === "dark"
