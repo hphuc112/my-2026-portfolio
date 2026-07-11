@@ -6,10 +6,11 @@ export function Projects() {
     <section id="projects" className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
       <div className="mb-8 max-w-2xl">
         <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
-          Selected projects
+          Projects
         </p>
         <h2 className="text-foreground mt-3 text-3xl font-semibold tracking-tight">
-          A few launches I&apos;ve helped shape.
+          I&apos;m building real projects to sharpen my skills and show what I
+          can do - not just class assignments.
         </h2>
       </div>
       <div className="grid gap-6 lg:grid-cols-2">

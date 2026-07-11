@@ -6,6 +6,7 @@ export function Hero() {
       <div className="bg-background flex min-h-screen flex-col justify-between p-8 pt-24 lg:p-12 lg:pt-28">
         <div>
           <span className="border-border bg-accent/80 text-foreground/80 mb-3 inline-flex items-center rounded-full border px-4 py-1">
+            <span className="bg-success mr-2 block size-2 rounded-full"></span>
             Available for new projects
           </span>
         </div>
@@ -15,15 +16,17 @@ export function Hero() {
             Hello, I&apos;m Phuc Tran
           </p>
           <h1 className="text-foreground text-3xl leading-tight font-light lg:text-5xl">
-            A Front-End Developer in Ho Chi Minh City.
+            Turning ideas into clean, working interfaces.
           </h1>
           <p className="text-foreground/70 max-w-md text-lg">
-            Find me at{" "}
+            Find me on{" "}
             <a
               href="https://github.com/hphuc112"
               target="_blank"
               rel="noreferrer"
-              className="decoration-camel text-foreground font-medium underline underline-offset-4"
+              className={
+                "text-success decoration-camel font-medium underline underline-offset-4"
+              }
             >
               GitHub
             </a>{" "}
@@ -32,29 +35,41 @@ export function Hero() {
               href="https://www.linkedin.com/in/tranhoangphucttb/"
               target="_blank"
               rel="noreferrer"
-              className="decoration-camel text-foreground font-medium underline underline-offset-4"
+              className={
+                "text-success decoration-camel font-medium underline underline-offset-4"
+              }
             >
               LinkedIn
             </a>
             .
           </p>
 
-          <div className="flex flex-wrap gap-3">
+          <p className="text-foreground/70 max-w-md text-lg">
+            Download my{" "}
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+              className={
+                "text-success decoration-camel font-medium underline underline-offset-4"
+              }
+            >
+              resume
+            </a>
+            .
+          </p>
+
+          <div className="flex flex-wrap gap-3 text-3xl">
             <Button href="#projects">See projects</Button>
-            <Button href="/resume.pdf" variant="secondary">
-              Download my resume
-            </Button>
           </div>
         </div>
 
         <div>
-          <p className="text-foreground/60 text-sm">
-            Frontend-focused • Curious about modern web technologies.
-          </p>
+          <p className="text-foreground/60 text-sm"></p>
         </div>
       </div>
 
-      <div className="bg-accent relative min-h-[320px] overflow-hidden lg:h-full">
+      <div className="bg-accent relative min-h-80 overflow-hidden lg:h-full">
         <img
           src="/images/portrait.webp"
           alt="Portrait of Phuc Tran"

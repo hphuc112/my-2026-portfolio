@@ -40,10 +40,10 @@ export function Header() {
           href="#top"
           className="text-foreground text-lg font-semibold tracking-tight"
         >
-          tranhoangphucttb
+          phuctran
         </Link>
         <div className="flex items-center gap-3">
-          <nav className="text-foreground/70 mr-6 flex items-center gap-6 text-sm">
+          <nav className="text-foreground/70 mr-2 flex items-center gap-5 text-sm">
             {navItems.map((item) => (
               <Link
                 key={item.href}

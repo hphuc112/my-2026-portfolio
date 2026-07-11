@@ -9,22 +9,30 @@ export function Overview() {
           <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
             Overview
           </p>
-          <h2 className="text-foreground text-3xl font-semibold tracking-tight sm:text-4xl">
-            A Front-End Developer in Ho Chi Minh City.
+          <h2 className="text-foreground text-3xl font-semibold tracking-tight sm:text-3xl">
+            A Front-End Developer
+          </h2>{" "}
+          <h2 className="text-foreground text-3xl font-semibold tracking-tight sm:text-3xl">
+            in Ho Chi Minh City.
           </h2>
         </div>
         <div className="text-foreground/70 flex flex-col gap-4 text-base leading-7">
           <p>
-            Computer Science Engineering graduate with hands-on experience
-            building web applications. Familiar with HTML, CSS, JavaScript, and
-            Git. Looking for a junior or entry-level software developer role
-            where I can contribute, learn, and grow.
+            Computer Science graduate specializing in front-end development. I
+            build responsive, accessible web interfaces using React, Next.js,
+            and Tailwind CSS - including this portfolio itself, optimized for a
+            90+ Lighthouse score.
           </p>
           <p>
-            TOEIC certified (LR: 660/990, SW: 310/400) and comfortable with
-            technical English. I enjoy solving frontend-related problems and
-            love working with UI/UX design. I&apos;m also curious about new
-            technologies and enjoy learning them.
+            I am looking for my role as a junior developer, where I can
+            contribute from day one while continuing to learn from experienced
+            engineers. I enjoy the problem-solving side of front-end work as
+            much as the design side - turning a Figma file into pixel-accurate,
+            functional UI is what I find most satisfying.
+          </p>
+          <p>
+            Comfortable reading and writing technical English, and currently
+            exploring component design systems.
           </p>
         </div>
       </div>
