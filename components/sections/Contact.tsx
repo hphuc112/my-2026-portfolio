@@ -15,10 +15,14 @@ export function Contact() {
           reliable frontend partner, I&apos;d love to hear about it.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
-          <Button href="mailto:Phuc Tran@example.com">Email me</Button>
-          <Button href="https://www.linkedin.com" variant="secondary">
-            LinkedIn
-          </Button>
+          <a
+            href=""
+            target="_blank"
+            rel="noreferrer"
+            className={"text-success decoration-camel text-2xl font-medium"}
+          >
+            hello@tranhoangphucttb.dev
+          </a>
         </div>
       </div>
     </section>

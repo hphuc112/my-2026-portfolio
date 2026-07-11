@@ -5,10 +5,10 @@ export function Faq() {
   return (
     <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
       <div className="mb-8 max-w-2xl">
-        <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
+        <p className="text-success text-sm font-semibold tracking-[0.3em] uppercase">
           FAQ
         </p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-stone-800">
+        <h2 className="mt-3 text-3xl font-semibold tracking-tight">
           Quick answers before we start.
         </h2>
       </div>

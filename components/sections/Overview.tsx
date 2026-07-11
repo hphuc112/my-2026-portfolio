@@ -4,9 +4,9 @@ export function Overview() {
       id="overview"
       className="mx-auto w-full max-w-6xl px-6 py-16 lg:px-8"
     >
-      <div className="border-border bg-background/80 grid gap-8 rounded-[2rem] border p-8 shadow-sm lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
+      <div className="border-border bg-background/80 grid gap-8 rounded-4xl border p-8 shadow-sm lg:grid-cols-[0.9fr_1.1fr] lg:p-10">
         <div className="flex flex-col gap-3">
-          <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
+          <p className="text-success text-sm font-semibold tracking-[0.3em] uppercase">
             Overview
           </p>
           <h2 className="text-foreground text-3xl font-semibold tracking-tight sm:text-3xl">

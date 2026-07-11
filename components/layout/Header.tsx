@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const navItems = [
-  { label: "About", href: "#overview" },
+  { label: "Overview", href: "#overview" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
@@ -33,11 +33,19 @@ export function Header() {
     setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
   };
 
+  const scrollToSection =
+    (id: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+      e.preventDefault();
+      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      history.pushState(null, "", `#${id}`);
+    };
+
   return (
     <header className="border-border/80 bg-background/90 fixed inset-x-0 top-0 z-20 h-15 border-b backdrop-blur">
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-6 lg:px-8">
         <Link
           href="#top"
+          onClick={scrollToSection("top")}
           className="text-foreground text-lg font-semibold tracking-tight"
         >
           phuctran
@@ -48,6 +56,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={scrollToSection(item.href.slice(1))}
                 className="hover:text-foreground transition"
               >
                 {item.label}
@@ -60,6 +69,7 @@ export function Header() {
             className="border-border bg-secondary hover:bg-accent flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border p-2 transition"
             aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
           >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/night-mode.png"
               alt={

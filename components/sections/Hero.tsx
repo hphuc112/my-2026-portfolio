@@ -5,7 +5,7 @@ export function Hero() {
     <section id="top" className="grid min-h-screen w-full lg:grid-cols-2">
       <div className="bg-background flex min-h-screen flex-col justify-between p-8 pt-24 lg:p-12 lg:pt-28">
         <div>
-          <span className="border-border bg-accent/80 text-foreground/80 mb-3 inline-flex items-center rounded-full border px-4 py-1">
+          <span className="border-border bg-accent/80 text-foreground/80 inline-flex items-center rounded-full border px-4 py-1 text-sm">
             <span className="bg-success mr-2 block size-2 rounded-full"></span>
             Available for new projects
           </span>
@@ -15,10 +15,13 @@ export function Hero() {
           <p className="text-camel text-sm font-semibold tracking-[0.3em] uppercase">
             Hello, I&apos;m Phuc Tran
           </p>
-          <h1 className="text-foreground text-3xl leading-tight font-light lg:text-5xl">
+          <h1 className="text-foreground text-4xl leading-tight font-light lg:text-5xl">
             Turning ideas into clean, working interfaces.
           </h1>
-          <p className="text-foreground/70 max-w-md text-lg">
+          <div className="mb-6 flex flex-wrap gap-3">
+            <Button href="#projects">See projects</Button>
+          </div>
+          <p className="text-foreground/70 max-w-md text-sm">
             Find me on{" "}
             <a
               href="https://github.com/hphuc112"
@@ -44,7 +47,7 @@ export function Hero() {
             .
           </p>
 
-          <p className="text-foreground/70 max-w-md text-lg">
+          <p className="text-foreground/70 max-w-md text-sm">
             Download my{" "}
             <a
               href="/resume.pdf"
@@ -58,10 +61,6 @@ export function Hero() {
             </a>
             .
           </p>
-
-          <div className="flex flex-wrap gap-3 text-3xl">
-            <Button href="#projects">See projects</Button>
-          </div>
         </div>
 
         <div>
@@ -70,6 +69,7 @@ export function Hero() {
       </div>
 
       <div className="bg-accent relative min-h-80 overflow-hidden lg:h-full">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/images/portrait.webp"
           alt="Portrait of Phuc Tran"
