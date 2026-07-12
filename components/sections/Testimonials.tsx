@@ -1,5 +1,5 @@
-import { testimonials } from "@/lib/data";
-import { Card } from "@/components/ui/Card";
+// import { testimonials } from "@/lib/data";
+// import { Card } from "@/components/ui/Card";
 
 export function Testimonials() {
   return (

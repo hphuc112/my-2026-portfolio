@@ -38,6 +38,8 @@ function AnimatedText({
   text: string;
   className?: string;
 }) {
+  const words = text.split(" ");
+
   return (
     <motion.h1
       initial="hidden"
@@ -46,15 +48,20 @@ function AnimatedText({
       className={className}
       aria-label={text}
     >
-      {text.split("").map((char, i) => (
-        <motion.span
-          key={i}
-          variants={charVariant}
-          aria-hidden="true"
-          className="inline-block"
-        >
-          {char === " " ? "\u00A0" : char}
-        </motion.span>
+      {words.map((word, wordIndex) => (
+        <span key={wordIndex} className="inline-block whitespace-nowrap">
+          {word.split("").map((char, charIndex) => (
+            <motion.span
+              key={charIndex}
+              variants={charVariant}
+              aria-hidden="true"
+              className="inline-block"
+            >
+              {char}
+            </motion.span>
+          ))}
+          {wordIndex < words.length - 1 && "\u00A0"}
+        </span>
       ))}
     </motion.h1>
   );

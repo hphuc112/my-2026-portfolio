@@ -18,7 +18,7 @@ export function Contact() {
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <a
             href="mailto:hello@tranhoangphucttb.dev"
-            className="text-success decoration-camel text-2xl font-medium"
+            className="text-success decoration-camel min-w-0 text-lg font-medium break-all sm:text-xl lg:text-2xl"
           >
             hello@tranhoangphucttb.dev
           </a>

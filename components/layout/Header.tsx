@@ -52,9 +52,9 @@ export function Header() {
         <Link
           href="#top"
           onClick={scrollToSection("top")}
-          className="text-foreground text-lg font-semibold tracking-tight"
+          className="text-foreground text-sm font-semibold tracking-tight"
         >
-          tranhoangphucttb
+          Phuc Tran
         </Link>
         <div className="flex items-center gap-3">
           <nav className="text-foreground/70 mr-2 flex items-center gap-5 text-sm">
