@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { motion } from "motion/react";
 
 const navItems = [
   { label: "Overview", href: "#overview" },
@@ -41,7 +42,12 @@ export function Header() {
     };
 
   return (
-    <header className="border-border/80 bg-background/90 fixed inset-x-0 top-0 z-20 h-15 border-b backdrop-blur">
+    <motion.header
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 3.1, duration: 0.6, ease: "easeOut" }}
+      className="border-border/80 bg-background/90 fixed inset-x-0 top-0 z-20 h-15 border-b backdrop-blur"
+    >
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-6 lg:px-8">
         <Link
           href="#top"
@@ -82,6 +88,6 @@ export function Header() {
           </button>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 }

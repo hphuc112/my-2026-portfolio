@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/Button";
+import { CopyEmailButton } from "@/components/ui/CopyEmailButton";
 
 export function Contact() {
   return (
@@ -14,15 +15,14 @@ export function Contact() {
           If you&apos;re launching a product, refreshing an interface, or need a
           reliable frontend partner, I&apos;d love to hear about it.
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-8 flex flex-wrap items-center gap-3">
           <a
-            href=""
-            target="_blank"
-            rel="noreferrer"
-            className={"text-success decoration-camel text-2xl font-medium"}
+            href="mailto:hello@tranhoangphucttb.dev"
+            className="text-success decoration-camel text-2xl font-medium"
           >
             hello@tranhoangphucttb.dev
           </a>
+          <CopyEmailButton email="hello@tranhoangphucttb.dev" />
         </div>
       </div>
     </section>
