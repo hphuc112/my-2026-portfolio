@@ -1,6 +1,12 @@
 import { projects } from "@/lib/data";
 import { Card } from "@/components/ui/Card";
 
+const statusLabel: Record<string, string> = {
+  live: "Live",
+  "in-progress": "In progress",
+  "coming-soon": "Coming soon",
+};
+
 export function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
@@ -15,15 +21,60 @@ export function Projects() {
       </div>
       <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project) => (
-          <Card key={project.title} className="space-y-4">
-            <div className="border-border bg-accent/70 text-foreground/70 rounded-2xl border p-6 text-sm">
-              {project.description}
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-foreground text-xl font-semibold">
-                {project.title}
-              </h3>
-              <p className="text-foreground/60 text-sm">{project.stack}</p>
+          <Card
+            key={project.title}
+            image={project.image}
+            imageAlt={project.title}
+          >
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <h3 className="text-foreground text-xl font-semibold">
+                  {project.title}
+                </h3>
+                <span className="border-border text-foreground/60 rounded-full border px-3 py-1 text-xs font-medium">
+                  {statusLabel[project.status]}
+                </span>
+              </div>
+
+              <p className="text-foreground/70 text-sm">
+                {project.description}
+              </p>
+
+              <div className="flex flex-wrap gap-2">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="bg-accent/70 text-foreground/70 rounded-full px-3 py-1 text-xs"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <p className="text-foreground/50 text-xs">{project.stack}</p>
+
+              <div className="flex gap-4 pt-2 text-sm font-medium">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground hover:underline"
+                  >
+                    Live demo →
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-foreground/70 hover:underline"
+                  >
+                    GitHub
+                  </a>
+                )}
+              </div>
             </div>
           </Card>
         ))}

@@ -54,7 +54,7 @@ export function Header() {
           onClick={scrollToSection("top")}
           className="text-foreground text-lg font-semibold tracking-tight"
         >
-          phuctran
+          tranhoangphucttb
         </Link>
         <div className="flex items-center gap-3">
           <nav className="text-foreground/70 mr-2 flex items-center gap-5 text-sm">

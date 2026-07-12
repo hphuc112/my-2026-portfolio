@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/Button";
 import { CopyEmailButton } from "@/components/ui/CopyEmailButton";
 
 export function Contact() {
@@ -9,11 +8,12 @@ export function Contact() {
           Contact
         </p>
         <h2 className="mt-3 text-3xl font-semibold tracking-tight">
-          Let&apos;s build something thoughtful together.
+          Let&apos;s talk about an opportunity.
         </h2>
         <p className="text-sand mt-4 max-w-2xl">
-          If you&apos;re launching a product, refreshing an interface, or need a
-          reliable frontend partner, I&apos;d love to hear about it.
+          I&apos;m actively looking for junior/entry-level frontend roles. If
+          you&apos;re hiring, or just want to chat about frontend development,
+          feel free to reach out.
         </p>
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <a

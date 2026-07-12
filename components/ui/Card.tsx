@@ -1,16 +1,29 @@
 import type { ReactNode } from "react";
+import Image from "next/image";
 
 interface CardProps {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
+  image?: string;
+  imageAlt?: string;
 }
 
-export function Card({ children, className = "" }: CardProps) {
+export function Card({ children, className = "", image, imageAlt }: CardProps) {
   return (
     <article
-      className={`border-border bg-background/80 rounded-3xl border p-6 shadow-sm ${className}`}
+      className={`border-border bg-background/80 overflow-hidden rounded-3xl border shadow-sm ${className}`}
     >
-      {children}
+      {image && (
+        <div className="bg-accent relative aspect-video w-full">
+          <Image
+            src={image}
+            alt={imageAlt ?? ""}
+            fill
+            className="object-cover"
+          />
+        </div>
+      )}
+      <div className="p-6">{children}</div>
     </article>
   );
 }
