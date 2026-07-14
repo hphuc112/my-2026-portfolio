@@ -22,7 +22,7 @@ export function Skills() {
           {track.map(({ name, Icon, description }, i) => (
             <div
               key={`${name}-${i}`}
-              className="group/item border-border bg-secondary/20 hover:border-success relative flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border transition-colors"
+              className="group/item border-border bg-secondary/10 hover:border-success relative flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border transition-colors"
             >
               <Icon
                 className="text-foreground/80 h-8 w-8"
@@ -30,7 +30,7 @@ export function Skills() {
               />
               <span className="sr-only">{name}</span>
 
-              <div className="bg-foreground text-background pointer-events-none absolute -top-12 left-1/2 w-max max-w-40 -translate-x-1/2 rounded-lg px-3 py-1.5 text-center text-xs opacity-0 transition-opacity duration-200 group-hover/item:opacity-100">
+              <div className="bg-foreground text-background pointer-events-none absolute -top-13 left-1/2 w-max max-w-40 -translate-x-1/2 rounded-lg px-3 py-1.5 text-center text-xs opacity-0 transition-opacity duration-200 group-hover/item:opacity-100">
                 {description}
               </div>
             </div>

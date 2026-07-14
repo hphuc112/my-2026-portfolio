@@ -104,11 +104,21 @@ export const faqs = [
   {
     question: "What's your current stack?",
     answer:
-      "Next.js, TypeScript, and Tailwind CSS on the frontend, with Supabase/Postgres when a project needs a backend and database.",
+      "Next.js, TypeScript, and Tailwind CSS on the frontend. I'm comfortable picking up a backend and database layer like Supabase when a project calls for one.",
   },
   {
     question: "Are you open to remote or relocation?",
     answer:
       "Yes, I'm comfortable working async across time zones, and open to remote or on-site depending on the role.",
+  },
+  {
+    question: "When can you start?",
+    answer:
+      "I'm available immediately and can start as soon as a good fit comes up.",
+  },
+  {
+    question: "What's this portfolio built with?",
+    answer:
+      "Next.js, TypeScript, and Tailwind CSS, deployed on Vercel - the same stack I'd bring to a team. Feel free to poke around the code on GitHub.",
   },
 ];
