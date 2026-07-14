@@ -1,3 +1,54 @@
+import type { IconType } from "react-icons";
+import {
+  SiNextdotjs,
+  SiReact,
+  SiTypescript,
+  SiTailwindcss,
+  SiGit,
+  SiFigma,
+  SiVercel,
+} from "react-icons/si";
+
+interface Skill {
+  name: string;
+  description: string;
+  Icon: IconType;
+}
+
+export const skills: Skill[] = [
+  {
+    name: "Next.js",
+    description: "App Router, routing, server components",
+    Icon: SiNextdotjs,
+  },
+  {
+    name: "React",
+    description: "Component-driven UI development",
+    Icon: SiReact,
+  },
+  {
+    name: "TypeScript",
+    description: "Type-safe components and data models",
+    Icon: SiTypescript,
+  },
+  {
+    name: "Tailwind CSS",
+    description: "Utility-first styling and design tokens",
+    Icon: SiTailwindcss,
+  },
+  {
+    name: "Git",
+    description: "Version control and collaboration",
+    Icon: SiGit,
+  },
+  {
+    name: "Figma",
+    description: "Turning designs into working UI",
+    Icon: SiFigma,
+  },
+  { name: "Vercel", description: "Deployment and hosting", Icon: SiVercel },
+];
+
 export type ProjectStatus = "live" | "in-progress" | "coming-soon";
 
 export interface Project {
@@ -34,14 +85,6 @@ export const projects: Project[] = [
     githubUrl: undefined,
     image: "/images/projects/ui-challenge.png",
   },
-];
-export const skills = [
-  "Next.js",
-  "React",
-  "TypeScript",
-  "Tailwind CSS",
-  "UI Systems",
-  "Accessibility",
 ];
 
 export const testimonials = [
