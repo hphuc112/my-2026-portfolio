@@ -1,3 +1,5 @@
+import { LiveClock } from "@/components/ui/LiveClock";
+
 export function Overview() {
   return (
     <section
@@ -15,24 +17,23 @@ export function Overview() {
           <h2 className="text-foreground text-3xl font-semibold tracking-tight sm:text-3xl">
             in Ho Chi Minh City.
           </h2>
+          <LiveClock />
         </div>
         <div className="text-foreground/70 flex flex-col gap-4 text-base leading-7">
           <p>
             Computer Science graduate specializing in front-end development. I
             build responsive, accessible web interfaces using React, Next.js,
-            and Tailwind CSS - including this portfolio itself, optimized for a
-            90+ Lighthouse score.
+            and Tailwind CSS including this portfolio itself, built with
+            performance and accessibility as priorities throughout.
           </p>
           <p>
-            I am looking for my role as a junior developer, where I can
-            contribute from day one while continuing to learn from experienced
-            engineers. I enjoy the problem-solving side of front-end work as
-            much as the design side - turning a Figma file into pixel-accurate,
-            functional UI is what I find most satisfying.
-          </p>
-          <p>
-            Comfortable reading and writing technical English, and currently
-            exploring component design systems.
+            I&apos;m looking for my first role as a junior developer, where I
+            can contribute from early on while continuing to learn from
+            experienced engineers. I enjoy the problem-solving side of front-end
+            work as much as the design side turning a Figma file into
+            pixel-accurate, functional UI is what I find most satisfying.
+            I&apos;m also comfortable reading and writing technical English, and
+            currently exploring component design systems in more depth.
           </p>
         </div>
       </div>
