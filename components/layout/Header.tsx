@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { motion } from "motion/react";
+import { useEffect, useState, useRef } from "react";
+import { motion, useScroll, useMotionValueEvent } from "motion/react";
 
 const navItems = [
   { label: "Overview", href: "#overview" },
@@ -18,6 +18,23 @@ export function Header() {
 
     const storedTheme = window.localStorage.getItem("theme");
     return storedTheme === "light" ? "light" : "dark";
+  });
+
+  const [hidden, setHidden] = useState(false);
+  const lastScrollY = useRef(0);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const previous = lastScrollY.current;
+
+    // Ignore tiny jitters and don't hide until past the header's own height
+    if (current > previous && current > 100) {
+      setHidden(true); // scrolling down → hide
+    } else {
+      setHidden(false); // scrolling up → show
+    }
+
+    lastScrollY.current = current;
   });
 
   const applyTheme = (nextTheme: "dark" | "light") => {
@@ -44,8 +61,11 @@ export function Header() {
   return (
     <motion.header
       initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 3.1, duration: 0.6, ease: "easeOut" }}
+      animate={{
+        opacity: 1,
+        y: hidden ? "-100%" : 0,
+      }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
       className="border-border/80 bg-background/90 fixed inset-x-0 top-0 z-20 h-15 border-b backdrop-blur"
     >
       <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-6 lg:px-8">
