@@ -1,4 +1,4 @@
-import { CopyEmailButton } from "@/components/ui/CopyEmailButton";
+import { CopyButton } from "@/components/ui/CopyButton";
 
 export function Contact() {
   return (
@@ -22,7 +22,7 @@ export function Contact() {
           >
             hello@tranhoangphucttb.dev
           </a>
-          <CopyEmailButton email="hello@tranhoangphucttb.dev" />
+          <CopyButton value="hello@tranhoangphucttb.dev" />
         </div>
       </div>
     </section>

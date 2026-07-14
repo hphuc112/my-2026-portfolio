@@ -2,20 +2,20 @@
 
 import { useState } from "react";
 
-interface CopyEmailButtonProps {
-  email: string;
+interface CopyButtonProps {
+  value: string;
 }
 
-export function CopyEmailButton({ email }: CopyEmailButtonProps) {
+export function CopyButton({ value }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(email);
+      await navigator.clipboard.writeText(value);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch (err) {
-      console.error("Failed to copy email:", err);
+      console.error("Failed to copy value:", err);
     }
   };
 
@@ -23,7 +23,7 @@ export function CopyEmailButton({ email }: CopyEmailButtonProps) {
     <button
       type="button"
       onClick={handleCopy}
-      aria-label="Copy email address"
+      aria-label="Copy to clipboard"
       className="text-camel ml-3 inline-flex items-center transition-opacity hover:opacity-70"
     >
       {copied ? (
