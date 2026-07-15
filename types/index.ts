@@ -1,7 +1,14 @@
+import type { IconType } from "react-icons";
+
 export interface Project {
   title: string;
   description: string;
-  stack: string;
+  stack: { name: string; Icon?: IconType }[];
+  tags: string[];
+  status: "live" | "in-progress" | "coming-soon";
+  liveUrl?: string;
+  githubUrl?: string;
+  image?: string;
 }
 
 export interface Testimonial {

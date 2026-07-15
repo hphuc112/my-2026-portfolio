@@ -2,7 +2,7 @@ import { projects } from "@/lib/data";
 import { Card } from "@/components/ui/Card";
 
 const statusLabel: Record<string, string> = {
-  live: "Live",
+  live: "In progress",
   "in-progress": "In progress",
   "coming-soon": "Coming soon",
 };
@@ -27,7 +27,7 @@ export function Projects() {
             imageAlt={project.title}
           >
             <div className="space-y-4">
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between gap-3">
                 <h3 className="text-foreground text-xl font-semibold">
                   {project.title}
                 </h3>
@@ -51,7 +51,29 @@ export function Projects() {
                 ))}
               </div>
 
-              <p className="text-foreground/50 text-xs">{project.stack}</p>
+              <div className="flex flex-wrap items-center gap-4 pt-1">
+                {project.stack.map(({ name, Icon }) => (
+                  <div
+                    key={name}
+                    className="group/stack relative flex items-center"
+                  >
+                    {Icon ? (
+                      <Icon className="text-foreground/60 hover:text-foreground h-5 w-5 transition-colors" />
+                    ) : (
+                      <span className="text-foreground/60 hover:text-foreground text-xs font-medium transition-colors">
+                        {name}
+                      </span>
+                    )}
+                    <span className="sr-only">{name}</span>
+
+                    {Icon && (
+                      <span className="bg-foreground text-background pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 rounded px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity duration-200 group-hover/stack:opacity-100">
+                        {name}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
 
               <div className="flex gap-4 pt-2 text-sm font-medium">
                 {project.liveUrl && (
@@ -61,7 +83,7 @@ export function Projects() {
                     rel="noopener noreferrer"
                     className="text-foreground hover:underline"
                   >
-                    Live demo →
+                    Still want a live demo?
                   </a>
                 )}
                 {project.githubUrl && (

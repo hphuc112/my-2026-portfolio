@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SiGithub } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa6";
 export function Footer() {

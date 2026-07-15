@@ -7,7 +7,10 @@ import {
   SiGit,
   SiFigma,
   SiVercel,
+  SiSupabase,
+  SiFramer,
 } from "react-icons/si";
+import type { Project } from "@/types";
 
 interface Skill {
   name: string;
@@ -49,42 +52,36 @@ export const skills: Skill[] = [
   { name: "Vercel", description: "Deployment and hosting", Icon: SiVercel },
 ];
 
-export type ProjectStatus = "live" | "in-progress" | "coming-soon";
-
-export interface Project {
-  title: string;
-  description: string;
-  stack: string;
-  tags: string[];
-  status: ProjectStatus;
-  liveUrl?: string;
-  githubUrl?: string;
-  image?: string;
-}
-
 export const projects: Project[] = [
   {
     title: "Habit Tracker",
     description:
       "A full-stack habit tracker with flexible scheduling and streak analytics beyond simple daily checkboxes, it surfaces correlations between habits and visualizes progress with a GitHub-style heatmap.",
-    stack: "Next.js · TypeScript · Supabase · Recharts",
+    stack: [
+      { name: "Next.js", Icon: SiNextdotjs },
+      { name: "TypeScript", Icon: SiTypescript },
+      { name: "Supabase", Icon: SiSupabase },
+    ],
     tags: ["Full-stack", "Auth", "Database", "Data viz"],
     status: "in-progress",
-    liveUrl: undefined,
-    githubUrl: undefined,
-    image: undefined,
+    liveUrl: "https://habit-tracker.tranhoangphucttb.dev/",
+    githubUrl: "https://github.com/hphuc112/habit-tracker",
     // image: "/images/projects/habit-tracker.png",
   },
   {
     title: "UI Challenge Interface",
     description:
-      "A pixel-perfect, design-heavy interface build focused on interaction polish custom animations, responsive edge cases, and accessibility details that don't show up in a static mockup.",
-    stack: "Next.js · TypeScript · Tailwind CSS · Framer Motion",
+      "A pixel-perfect, design-heavy interface build focused on interaction polish, custom animations, responsive edge cases, and accessibility details that don't show up in a static mockup.",
+    stack: [
+      { name: "Next.js", Icon: SiNextdotjs },
+      { name: "TypeScript", Icon: SiTypescript },
+      { name: "Tailwind CSS", Icon: SiTailwindcss },
+      { name: "Framer Motion", Icon: SiFramer },
+    ],
     tags: ["Frontend", "Animation", "Responsive design"],
-    status: "in-progress",
-    liveUrl: undefined,
-    githubUrl: undefined,
-    image: undefined,
+    status: "live",
+    liveUrl: "https://journey.tranhoangphucttb.dev/",
+    githubUrl: "https://github.com/hphuc112/scroll-journey",
     // image: "/images/projects/ui-challenge.png",
   },
 ];
