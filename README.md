@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Phuc Tran — Portfolio
+
+My personal portfolio site, built to showcase my frontend work as I look for junior/entry-level developer roles.
+
+🔗 **Live:** [tranhoangphucttb.dev](https://tranhoangphucttb.dev)
+
+## Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org) (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4 (CSS-first `@theme` config, no `tailwind.config.ts`)
+- **Animation:** [Motion](https://motion.dev) (formerly Framer Motion) — entrance animations, staggered text reveals, animated accordion
+- **Smooth scroll:** [Lenis](https://lenis.darkroom.engineering)
+- **Icons:** react-icons (Simple Icons + Font Awesome 6)
+- **Deployment:** Vercel
+
+## Features
+
+- Fully responsive, mobile-first layout
+- Custom warm color palette and typography via Tailwind v4 design tokens
+- Dark/light theme toggle (persisted via `localStorage`)
+- Staggered entrance animations
+- Infinite auto-scrolling skills marquee with hover-to-pause and tooltips
+- Animated accordion-style FAQ section
+- Open Graph / Twitter meta tags for clean link previews when shared
 
 ## Getting Started
 
-First, run the development server:
+Clone the repo and install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it locally.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+my-portfolio/
+├── app/                    # Next.js App Router: root layout, global styles, page entry
+├── components/
+│   ├── layout/             # Header and Footer
+│   ├── providers/          # App-wide providers (e.g. smooth scroll)
+│   ├── sections/           # Page sections (Hero, Skills, Projects, FAQ, Contact, etc.)
+│   └── ui/                 # Reusable UI primitives (Button, Card, Accordion, etc.)
+├── lib/                    # Content data (data.ts) and shared helpers (utils.ts)
+├── public/
+│   ├── images/             # Site images, icons, and project screenshots
+│   └── resume.pdf          # Downloadable resume
+├── types/                  # Shared TypeScript type definitions
+└── ...config files         # ESLint, Prettier, TypeScript, Next.js config
+```
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Deployed on [Vercel](https://vercel.com), connected to this repository — every push to `main` triggers a production deploy.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contact
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Email: [hello@tranhoangphucttb.dev](mailto:hello@tranhoangphucttb.dev)
+- GitHub: [@hphuc112](https://github.com/hphuc112)
+- LinkedIn: [tranhoangphucttb](https://www.linkedin.com/in/tranhoangphucttb/)
