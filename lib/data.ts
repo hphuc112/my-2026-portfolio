@@ -72,7 +72,8 @@ export const projects: Project[] = [
     status: "in-progress",
     liveUrl: undefined,
     githubUrl: undefined,
-    image: "/images/projects/habit-tracker.png",
+    image: undefined,
+    // image: "/images/projects/habit-tracker.png",
   },
   {
     title: "UI Challenge Interface",
@@ -83,7 +84,8 @@ export const projects: Project[] = [
     status: "in-progress",
     liveUrl: undefined,
     githubUrl: undefined,
-    image: "/images/projects/ui-challenge.png",
+    image: undefined,
+    // image: "/images/projects/ui-challenge.png",
   },
 ];
 

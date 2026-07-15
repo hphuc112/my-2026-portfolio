@@ -28,6 +28,7 @@ const themeScript = `
 `;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://tranhoangphucttb.dev"),
   title: "Phuc Tran | Frontend Developer",
   description:
     "Frontend developer specializing in React, Next.js, and TypeScript. Open to junior/entry-level roles.",
