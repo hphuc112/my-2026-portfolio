@@ -28,9 +28,25 @@ const themeScript = `
 `;
 
 export const metadata: Metadata = {
-  title: "Phuc Tran | Portfolio | tranhoangphucttb",
+  title: "Phuc Tran | Frontend Developer",
   description:
-    "A polished portfolio landing page for a product designer and frontend engineer.",
+    "Frontend developer specializing in React, Next.js, and TypeScript. Open to junior/entry-level roles.",
+  openGraph: {
+    title: "Phuc Tran | Frontend Developer",
+    description:
+      "Frontend developer specializing in React, Next.js, and TypeScript. Open to junior/entry-level roles.",
+    url: "https://tranhoangphucttb.dev",
+    siteName: "Phuc Tran Portfolio",
+    images: ["/images/og-image.png"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Phuc Tran | Frontend Developer",
+    description:
+      "Frontend developer specializing in React, Next.js, and TypeScript.",
+    images: ["/images/og-image.png"],
+  },
 };
 
 export default function RootLayout({
