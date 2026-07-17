@@ -1,20 +1,21 @@
+import { Reveal } from "@/components/motion/Reveal";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 import { skills } from "@/lib/data";
 
 export function Skills() {
   const track = [...skills, ...skills, ...skills, ...skills];
 
   return (
-    <section className="mx-auto max-w-6xl px-6 py-2 lg:px-8">
-      {/* <div className="mb-10 max-w-2xl">
-        <p className="text-success text-sm font-semibold tracking-[0.3em] uppercase">
-          Skills
-        </p>
-        <h2 className="text-foreground mt-3 text-3xl font-semibold tracking-tight">
-          The stack I reach for most.
-        </h2>
-      </div> */}
+    <section className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20">
+      <Reveal>
+        <SectionHeader
+          className="mb-10"
+          label="Skills"
+          title="The stack I reach for most."
+        />
+      </Reveal>
 
-      <div className="group/track relative mx-auto w-full overflow-x-hidden pt-16">
+      <div className="group/track relative mx-auto w-full overflow-x-hidden">
         <div className="from-background pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r to-transparent" />
         <div className="from-background pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l to-transparent" />
 

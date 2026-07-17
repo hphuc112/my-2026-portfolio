@@ -11,15 +11,15 @@ interface CardProps {
 export function Card({ children, className = "", image, imageAlt }: CardProps) {
   return (
     <article
-      className={`border-border bg-background/80 overflow-hidden rounded-3xl border shadow-sm ${className}`}
+      className={`group border-border bg-background/80 overflow-hidden rounded-3xl border shadow-sm ${className}`}
     >
       {image && (
-        <div className="bg-accent relative aspect-video w-full">
+        <div className="bg-accent relative aspect-video w-full overflow-hidden">
           <Image
             src={image}
             alt={imageAlt ?? ""}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           />
         </div>
       )}

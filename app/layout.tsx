@@ -64,7 +64,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="flex min-h-full flex-col">
+      <body className="font-sans flex min-h-full flex-col">
         <SmoothScroll>{children}</SmoothScroll>
       </body>
     </html>

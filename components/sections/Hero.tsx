@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, type Variants } from "motion/react";
 import { Button } from "@/components/ui/Button";
 
@@ -163,14 +164,21 @@ export function Hero() {
       </div>
 
       <div className="bg-accent relative min-h-80 overflow-hidden lg:h-full">
-        <motion.img
-          src="/images/portrait.webp"
-          alt="Portrait of Phuc Tran"
+        <motion.div
           initial={{ filter: "blur(20px)", scale: 1.1, opacity: 0 }}
           animate={{ filter: "blur(0px)", scale: 1, opacity: 1 }}
           transition={{ duration: 1.0, ease: "easeOut" }}
-          className="h-full w-full object-cover object-center lg:absolute lg:inset-0"
-        />
+          className="relative h-full w-full lg:absolute lg:inset-0"
+        >
+          <Image
+            src="/images/portrait.webp"
+            alt="Portrait of Phuc Tran"
+            fill
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            className="object-cover object-center"
+          />
+        </motion.div>
       </div>
     </section>
   );
