@@ -6,15 +6,36 @@ interface CardProps {
   className?: string;
   image?: string;
   imageAlt?: string;
+  accent?: boolean;
 }
 
-export function Card({ children, className = "", image, imageAlt }: CardProps) {
+const ACCENT_CARDS = ["Habit Tracker", "UI Challenge Interface"];
+
+export function Card({
+  children,
+  className = "",
+  image,
+  imageAlt,
+  accent,
+}: CardProps) {
+  const isAccentByTitle = imageAlt
+    ? ACCENT_CARDS.some((t) => imageAlt.toLowerCase().includes(t.toLowerCase()))
+    : false;
+
+  const isAccent = accent || isAccentByTitle;
+
   return (
     <article
-      className={`group border-border bg-background/80 overflow-hidden rounded-3xl border shadow-sm ${className}`}
+      className={`group border-border overflow-hidden rounded-3xl border shadow-sm ${
+        isAccent ? "bg-accent border-border/60" : "bg-background/80"
+      } ${className}`}
     >
       {image && (
-        <div className="bg-accent relative aspect-video w-full overflow-hidden">
+        <div
+          className={`relative aspect-video w-full overflow-hidden ${
+            isAccent ? "bg-background" : "bg-accent"
+          }`}
+        >
           <Image
             src={image}
             alt={imageAlt ?? ""}

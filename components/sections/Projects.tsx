@@ -15,7 +15,10 @@ const linkClassName =
 
 export function Projects() {
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20">
+    <section
+      id="projects"
+      className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20"
+    >
       <Reveal>
         <SectionHeader
           className="mb-8"

@@ -4,11 +4,13 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 
 export function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20">
+    <section
+      id="contact"
+      className="mx-auto max-w-6xl px-6 py-16 lg:px-8 lg:py-20"
+    >
       <Reveal>
-        <div className="border-border bg-foreground text-background rounded-3xl border p-10 shadow-xl">
+        <div className="bg-accent text-foreground border-border/60 rounded-3xl border p-10 shadow-sm">
           <SectionHeader
-            inverted
             label="Contact"
             title="Let's talk about an opportunity."
             description="I'm actively looking for junior/entry-level frontend roles. If you're hiring, or just want to chat about frontend development, feel free to reach out."
