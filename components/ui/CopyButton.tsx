@@ -23,8 +23,9 @@ export function CopyButton({ value }: CopyButtonProps) {
     <button
       type="button"
       onClick={handleCopy}
-      aria-label="Copy to clipboard"
-      className="text-camel ml-3 inline-flex items-center transition-opacity hover:opacity-70"
+      aria-label={copied ? "Copied to clipboard" : "Copy email to clipboard"}
+      title={copied ? "Copied!" : "Copy email to clipboard"}
+      className="text-camel group relative ml-3 inline-flex cursor-pointer items-center transition-opacity hover:opacity-70"
     >
       {copied ? (
         <svg
@@ -56,6 +57,10 @@ export function CopyButton({ value }: CopyButtonProps) {
           <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
         </svg>
       )}
+
+      <span className="bg-foreground text-background pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 rounded-md px-2 py-1 text-xs whitespace-nowrap opacity-0 transition-opacity group-hover:opacity-100">
+        {copied ? "Copied!" : "Copy email"}
+      </span>
     </button>
   );
 }

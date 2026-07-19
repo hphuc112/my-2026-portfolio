@@ -32,7 +32,7 @@ export function Projects() {
             <Card
               image={project.image}
               imageAlt={project.title}
-              className="transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-md"
+              className="border-border hover:border-success border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between gap-3">
@@ -50,7 +50,7 @@ export function Projects() {
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="bg-accent/70 text-foreground/70 rounded-full px-3 py-1 text-xs"
+                      className="border-border bg-secondary/50 text-foreground/80 rounded-full border px-3 py-1 text-xs"
                     >
                       {tag}
                     </span>
@@ -89,7 +89,7 @@ export function Projects() {
                       rel="noopener noreferrer"
                       className={linkClassName}
                     >
-                      Still want a live demo?
+                      Live Demo
                     </a>
                   )}
                   {project.githubUrl && (
