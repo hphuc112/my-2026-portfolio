@@ -60,10 +60,11 @@ export const projects: Project[] = [
     stack: [
       { name: "Next.js", Icon: SiNextdotjs },
       { name: "TypeScript", Icon: SiTypescript },
+      { name: "Tailwind CSS", Icon: SiTailwindcss },
       { name: "Supabase", Icon: SiSupabase },
     ],
     tags: ["Full-stack", "Auth", "Database", "Data viz"],
-    status: "in-progress",
+    status: "live",
     liveUrl: "https://habit-tracker.tranhoangphucttb.dev/",
     githubUrl: "https://github.com/hphuc112/habit-tracker",
     // image: "/images/projects/habit-tracker.png",
