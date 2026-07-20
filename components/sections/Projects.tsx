@@ -5,7 +5,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { projects } from "@/lib/data";
 
 const statusLabel: Record<string, string> = {
-  live: "In progress",
+  live: "Live",
   "in-progress": "In progress",
   "coming-soon": "Coming soon",
 };

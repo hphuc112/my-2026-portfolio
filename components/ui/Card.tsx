@@ -40,6 +40,7 @@ export function Card({
             src={image}
             alt={imageAlt ?? ""}
             fill
+            sizes="(min-width: 1024px) min(576px, 50vw), calc(100vw - 3rem)"
             className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           />
         </div>

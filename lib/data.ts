@@ -67,7 +67,7 @@ export const projects: Project[] = [
     status: "live",
     liveUrl: "https://habit-tracker.tranhoangphucttb.dev/",
     githubUrl: "https://github.com/hphuc112/habit-tracker",
-    // image: "/images/projects/habit-tracker.png",
+    image: "/images/projects/habit-tracker.png",
   },
   {
     title: "UI Challenge Interface",
@@ -83,7 +83,7 @@ export const projects: Project[] = [
     status: "live",
     liveUrl: "https://journey.tranhoangphucttb.dev/",
     githubUrl: "https://github.com/hphuc112/scroll-journey",
-    // image: "/images/projects/ui-challenge.png",
+    image: "/images/projects/ui-challenge.png",
   },
 ];
 
