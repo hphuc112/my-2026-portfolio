@@ -26,15 +26,16 @@ export function Projects() {
           title="I'm building real projects to sharpen my skills and show what I can do."
         />
       </Reveal>
-      <StaggerGroup className="grid gap-6 lg:grid-cols-2">
-        {projects.map((project) => (
-          <StaggerItem key={project.title}>
+      <StaggerGroup className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
+        {projects.map((project, index) => (
+          <StaggerItem key={project.title} className="h-full">
             <Card
               image={project.image}
               imageAlt={project.title}
+              priority={index === 0}
               className="border-border hover:border-success border transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md"
             >
-              <div className="space-y-4">
+              <div className="flex flex-1 flex-col gap-4">
                 <div className="flex items-center justify-between gap-3">
                   <h3 className="text-foreground text-xl font-semibold">
                     {project.title}
@@ -81,7 +82,7 @@ export function Projects() {
                   ))}
                 </div>
 
-                <div className="flex gap-4 pt-2 text-sm font-medium">
+                <div className="mt-auto flex gap-4 pt-2 text-sm font-medium">
                   {project.liveUrl && project.status === "live" && (
                     <a
                       href={project.liveUrl}
