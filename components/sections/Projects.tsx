@@ -23,7 +23,7 @@ export function Projects() {
         <SectionHeader
           className="mb-8"
           label="Projects"
-          title="I'm building real projects to sharpen my skills and show what I can do - not just class assignments."
+          title="I'm building real projects to sharpen my skills and show what I can do."
         />
       </Reveal>
       <StaggerGroup className="grid gap-6 lg:grid-cols-2">
@@ -82,7 +82,7 @@ export function Projects() {
                 </div>
 
                 <div className="flex gap-4 pt-2 text-sm font-medium">
-                  {project.liveUrl && (
+                  {project.liveUrl && project.status === "live" && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -90,6 +90,16 @@ export function Projects() {
                       className={linkClassName}
                     >
                       Live Demo
+                    </a>
+                  )}
+                  {project.liveUrl && project.status === "in-progress" && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${linkClassName} text-foreground/70`}
+                    >
+                      Preview
                     </a>
                   )}
                   {project.githubUrl && (

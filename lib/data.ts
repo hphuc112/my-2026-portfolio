@@ -8,7 +8,6 @@ import {
   SiFigma,
   SiVercel,
   SiSupabase,
-  SiFramer,
 } from "react-icons/si";
 import type { Project } from "@/types";
 
@@ -70,17 +69,17 @@ export const projects: Project[] = [
     image: "/images/projects/habit-tracker.png",
   },
   {
-    title: "UI Challenge Interface",
+    title: "Scroll Journey",
     description:
-      "A pixel-perfect, design-heavy interface build focused on interaction polish, custom animations, responsive edge cases, and accessibility details that don't show up in a static mockup.",
+      "An abstract, scroll-driven visual piece built with GSAP ScrollTrigger and Lenis - color, shape, and typography evolve across four scrubbed acts.",
     stack: [
       { name: "Next.js", Icon: SiNextdotjs },
       { name: "TypeScript", Icon: SiTypescript },
       { name: "Tailwind CSS", Icon: SiTailwindcss },
-      { name: "Framer Motion", Icon: SiFramer },
+      { name: "GSAP" },
     ],
-    tags: ["Frontend", "Animation", "Responsive design"],
-    status: "live",
+    tags: ["Frontend", "Animation", "Scroll-driven"],
+    status: "in-progress",
     liveUrl: "https://journey.tranhoangphucttb.dev/",
     githubUrl: "https://github.com/hphuc112/scroll-journey",
     image: "/images/projects/ui-challenge.png",

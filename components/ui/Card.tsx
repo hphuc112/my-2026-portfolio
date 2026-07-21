@@ -9,7 +9,7 @@ interface CardProps {
   accent?: boolean;
 }
 
-const ACCENT_CARDS = ["Habit Tracker", "UI Challenge Interface"];
+const ACCENT_CARDS = ["Habit Tracker", "Scroll Journey"];
 
 export function Card({
   children,
