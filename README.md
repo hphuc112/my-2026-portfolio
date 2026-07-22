@@ -1,4 +1,4 @@
-# Phuc Tran — Portfolio
+# Phuc Tran - Portfolio
 
 My personal portfolio site, built to showcase my frontend work as I look for junior/entry-level developer roles.
 
@@ -6,10 +6,11 @@ My personal portfolio site, built to showcase my frontend work as I look for jun
 
 ## Tech Stack
 
-- **Framework:** [Next.js](https://nextjs.org) (App Router)
+- **Framework:** [Next.js 16](https://nextjs.org) (App Router)
 - **Language:** TypeScript
+- **UI:** React 19
 - **Styling:** Tailwind CSS v4 (CSS-first `@theme` config, no `tailwind.config.ts`)
-- **Animation:** [Motion](https://motion.dev) (formerly Framer Motion) — entrance animations, staggered text reveals, animated accordion
+- **Animation:** [Motion](https://motion.dev) (formerly Framer Motion) - entrance animations, staggered text reveals, animated accordion
 - **Smooth scroll:** [Lenis](https://lenis.darkroom.engineering)
 - **Icons:** react-icons (Simple Icons + Font Awesome 6)
 - **Deployment:** Vercel
@@ -47,10 +48,11 @@ my-portfolio/
 ├── app/                    # Next.js App Router: root layout, global styles, page entry
 ├── components/
 │   ├── layout/             # Header and Footer
+│   ├── motion/             # Shared animation helpers (Reveal, stagger variants)
 │   ├── providers/          # App-wide providers (e.g. smooth scroll)
-│   ├── sections/           # Page sections (Hero, Skills, Projects, FAQ, Contact, etc.)
+│   ├── sections/           # Page sections (Hero, Overview, Skills, Projects, FAQ, Contact)
 │   └── ui/                 # Reusable UI primitives (Button, Card, Accordion, etc.)
-├── lib/                    # Content data (data.ts) and shared helpers (utils.ts)
+├── lib/                    # Content data (data.ts), motion presets (motion.ts), and helpers (utils.ts)
 ├── public/
 │   ├── images/             # Site images, icons, and project screenshots
 │   └── resume.pdf          # Downloadable resume
@@ -60,7 +62,7 @@ my-portfolio/
 
 ## Deployment
 
-Deployed on [Vercel](https://vercel.com), connected to this repository — every push to `main` triggers a production deploy.
+Deployed on [Vercel](https://vercel.com), connected to this repository - every push to `main` triggers a production deploy.
 
 ## Contact
 
